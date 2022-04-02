@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿using Saga.Core.Commands;
 using Saga.Infrastructure.Abstractions.Broker;
 
 namespace Saga.Infrastructure.Abstractions;

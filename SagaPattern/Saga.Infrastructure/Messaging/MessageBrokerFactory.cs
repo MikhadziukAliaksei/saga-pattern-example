@@ -1,5 +1,5 @@
 ﻿using System.Collections.Concurrent;
-using System.Data;
+using Saga.Core.Commands;
 using Saga.Infrastructure.Abstractions;
 using Saga.Infrastructure.Abstractions.Broker;
 using Saga.Infrastructure.Messaging.Broker;
