@@ -20,8 +20,10 @@ public class TrackSubmissionRepository : ITrackSubmissionRepository
         try
         {
             var trackSub = _dbContext.TrackSubmissions.FirstOrDefault(x => x.TrackSubmissionId.Equals(id));
-
+            var t = _dbContext.TrackSubmissions.ToList();
             trackSub.Status = status;
+
+            
 
             _dbContext.TrackSubmissions.Update(trackSub);
             await _dbContext.SaveChangesAsync();    

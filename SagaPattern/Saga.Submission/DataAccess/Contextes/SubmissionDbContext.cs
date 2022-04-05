@@ -12,7 +12,7 @@ namespace Saga.Submission.DataAccess.Contextes
         
         public SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
         
     }

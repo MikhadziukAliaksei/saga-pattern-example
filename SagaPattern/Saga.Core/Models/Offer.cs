@@ -1,4 +1,5 @@
-﻿using Saga.Core.Extensions;
+﻿using Newtonsoft.Json;
+using Saga.Core.Extensions;
 
 namespace Saga.Core.Models;
 
@@ -12,6 +13,7 @@ public class Offer : CommonInfo
     public OfferStatus Status { get; set; }
     public DateTime CreationDate { get; set; }
 
+    [JsonIgnore]
     public TrackSubmission TrackSubmission { get; set; }
     
     public string ToJsonString() => JsonExtensions.SerializeObject(this);

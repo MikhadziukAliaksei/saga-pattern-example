@@ -27,7 +27,7 @@ public class UpdateTrackSubmissionStatusRollbackWorker : IUpdateTrackSubmissionS
         {
             try
             {
-               e.Status = e.Status
+                e.Status = e.Status;
                 await _trackSubmissionRepository.UpdateTrackSubmissionStatusAsync(e.TrackSubmissionId, e.Status);
                 outputBroker.PushMessage(e);
             }
